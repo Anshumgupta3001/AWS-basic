@@ -1,0 +1,13 @@
+service: youtube-api
+framewrkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+functions:
+  youtubeHellofn:
+    handler: hello.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
